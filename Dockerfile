@@ -13,11 +13,11 @@ RUN apt-get update -y && \
     libblas-dev \
     # Clang and co
     clang clang-format clang-tidy \
-    # lldb
-    lldb \
-    # lld (linker)
-    lld \
     # N.B. (crcrpar): Somehow unable to locate the below packages so that they are skipped.
+    # lldb
+    # lldb \
+    # lld (linker)
+    # lld \
     # libc++
     ### libc++-dev libc++abi-dev \
     # OpenMP
@@ -33,3 +33,6 @@ RUN pip3 install --no-cache-dir \
         'autopep8>=1.4.1,<1.5' \
         'flake8>=3.7,<3.8'
 RUN CHAINER_BUILD_CHAINERX=1 CHAINERX_BUILD_CUDA=1 pip3 install --no-cache-dir cupy==6.0.0rc1 chainer==6.0.0rc1
+
+WORKDIR /workspace
+RUN chmod -R a+w /workspace
