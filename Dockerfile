@@ -32,7 +32,7 @@ RUN pip3 install --no-cache-dir \
         sphinx_rtd_theme \
         'autopep8>=1.4.1,<1.5' \
         'flake8>=3.7,<3.8'
-RUN CHAINER_BUILD_CHAINERX=1 CHAINERX_BUILD_CUDA=1 pip3 install --no-cache-dir cupy==7.0.0b2 chainer==7.0.0b2
+RUN CHAINER_BUILD_CHAINERX=1 CHAINERX_BUILD_CUDA=1 pip3 install --no-cache-dir cupy==7.0.0b3 chainer==7.0.0b3
 
 WORKDIR /workspace
 RUN chmod -R a+w /workspace
