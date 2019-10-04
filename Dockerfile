@@ -1,7 +1,7 @@
 ARG NVIDIA="10.0-cudnn7-devel-ubuntu18.04"
 FROM nvidia/cuda:${NVIDIA}
 
-RUN apt-get update -y && \
+
     apt-get install -y --no-install-recommends \
     python3-dev \
     python3-pip \
